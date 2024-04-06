@@ -11,7 +11,7 @@ const fetchTemplate = async () => {
     }
 };
 
-
+var divnumber = 1;
 var ws = new WebSocket("ws://localhost:8080/");
 
 function connectws() {
@@ -103,7 +103,7 @@ const generateCard = async (data) => {
     let cardHTML = template;
     data.forEach(item => {
         cardHTML = cardHTML.replace(/\${(.*?)}/g, (match, token) => {
-            console.log('Match:', match, 'Token:', token, 'Item:', item[token]);
+            // console.log('Match:', match, 'Token:', token, 'Item:', item[token]);
             const key = token.trim();
             if(!item[key]) {
                 switch (token) {
@@ -121,12 +121,32 @@ const generateCard = async (data) => {
     });
 
     let card = document.createElement('div');
-    card.classList.add('card');
+    card.id = divnumber;
+    divnumber++;
     card.innerHTML = cardHTML;
-    container.appendChild(card);
 
-    //gsap.to(card, {duration: 1, scale: 0.75, x: innerWidth/2, y: innerHeight/2});
+    let cardWidth = card.offsetWidth;
+    let leftPosition = (innerWidth - cardWidth) / 2;
+
+    gsap.set(card, { className: 'card', x: leftPosition, y: -1000, z: divnumber });
+
+    container.appendChild(card);
+    card_animation(card);
+
+    setTimeout(() => {
+        removeelement(card.id);
+    }, 15000);
+    
 };
+
+
+function card_animation(card){
+
+    let cardheight = card.offsetHeight;
+    let verticalCentered = (innerHeight - cardheight) / 2;
+    gsap.to(card, {duration: 2, scale: 0.75, y: verticalCentered});
+}
+
 
 
 const cardTypes = ['fire', 'fighting', 'dragon', 'lightning', 'grass', 'metal', 'water', 'psychic', 'darkness', 'colorless', 'fairy'];
@@ -291,6 +311,10 @@ function processCardData(data) {
 
     return data;
 
+}
+
+function removeelement(div) {
+    document.getElementById(div).remove();
 }
 
 
