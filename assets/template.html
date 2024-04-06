@@ -1,0 +1,374 @@
+<!-- template.html -->
+<div class="card-wrapper">
+    <div class="pkmn-card pkmn-card--base pkmn-card--energy-type-${cardType} pkmn-card--has-description">
+        <div class="card-surface card-surface--back"></div>
+        <div class="card-surface card-surface--front" id="card-surface-front">
+            <div class="card-body-image"></div>
+            <div class="card-body">
+                <div class="card-body__inner">
+                    <div class="card-body__inner__content">
+                        <div class="card-evolution-box ${showAffiliate}">
+                            <div class="card-evolution-box__inner">
+                                <div class="card-evolution-box__content">
+                                    <div class="card-evolution-box__title">Affiliate</div>
+                                    <div class="card-evolution-box__img-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-evolution-box ${showPartner}">
+                            <div class="card-evolution-box__inner">
+                                <div class="card-evolution-box__content">
+                                    <div class="card-evolution-box__title">Partner</div>
+                                    <div class="card-evolution-box__img-wrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-header-name-bar">
+                            <div class="card-header card-header${indentType}"><span
+                                    class="evolves-from">${userType}</span><span class="put-card"></span></div>
+                            <div class="card-name-bar card-name-bar${indentType}">
+                                <h1 class="card-name">${userName}</h1>
+                                <div class="card-name-bar-right"><span class="hit-points">100 HP</span>
+                                    <div class="card-energy-symbol"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 57.91 57.91"
+                                            height="30" width="30">
+                                            <defs>
+                                                <radialGradient id="co-radial-gradient" cx="28.96" cy="28.96"
+                                                    fx="18.2733555706497" fy="9.771120254151356" r="39.34"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0" stop-color="#fdfeff"></stop>
+                                                    <stop offset="0.49" stop-color="#f1f2f2"></stop>
+                                                    <stop offset="0.77" stop-color="#b1a6a0"></stop>
+                                                    <stop offset="1" stop-color="#816d62"></stop>
+                                                </radialGradient>
+                                                <linearGradient id="colorless-energy-linear-gradient" x1="28.96"
+                                                    y1="28.96" x2="28.96" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.25" stop-color="#fff" stop-opacity="0"></stop>
+                                                    <stop offset="1" stop-color="#fff"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                            <g id="colorless_layer_2" data-name="Layer 2">
+                                                <g id="colorless_layer_1" data-name="Layer 1">
+                                                    <circle fill="#b3b293" cx="28.96" cy="28.96" r="28.96"></circle>
+                                                    <g fill-opacity="0.5">
+                                                        <circle fill="url(#co-radial-gradient)" cx="28.96" cy="28.96"
+                                                            r="28.96"></circle>
+                                                    </g>
+                                                    <path fill="#010101"
+                                                        d="M45.83,38.2c-.08-.08-1.14-1.09-1.3-1.22a41.61,41.61,0,0,1-3.19-3.31c-1-1.16-2-2.36-2.85-3.58a2,2,0,0,1,0-2.27c.89-1.22,1.85-2.41,2.85-3.58a41.61,41.61,0,0,1,3.19-3.31c.16-.13,1.22-1.14,1.3-1.22.26-.22,1.22-1.09,1.64-1.44h0l-2.07.7c-.1,0-1.5.44-1.7.51a41.51,41.51,0,0,1-4.46,1.11c-1.51.29-3,.51-4.53.68A2.22,2.22,0,0,1,33.55,21a2.2,2.2,0,0,1-.81-.87q-.91-2.07-1.68-4.26a43.53,43.53,0,0,1-1.27-4.42c0-.2-.37-1.62-.4-1.72-.07-.34-.33-1.61-.43-2.15h0c-.1.54-.36,1.81-.43,2.15,0,.1-.37,1.52-.4,1.72a40.45,40.45,0,0,1-1.27,4.42q-.77,2.19-1.68,4.26a2.2,2.2,0,0,1-.81.87,1.59,1.59,0,0,1-.27.12,2.12,2.12,0,0,1-.88.15c-1.51-.17-3-.39-4.53-.68a41.51,41.51,0,0,1-4.46-1.11c-.2-.07-1.6-.49-1.7-.51l-2.07-.7h0c.41.35,1.37,1.22,1.64,1.44.07.08,1.13,1.09,1.29,1.22a41.61,41.61,0,0,1,3.19,3.31c1,1.16,2,2.36,2.85,3.58a2,2,0,0,1,0,2.27q-1.34,1.83-2.85,3.58A41.61,41.61,0,0,1,13.38,37c-.16.13-1.22,1.14-1.29,1.22-.27.22-1.23,1.09-1.64,1.44h0l2.07-.7c.1,0,1.5-.43,1.7-.51a41.51,41.51,0,0,1,4.46-1.11c1.51-.28,3-.51,4.53-.68a2.22,2.22,0,0,1,1.15.27,2.2,2.2,0,0,1,.81.87c.61,1.38,1.17,2.81,1.68,4.26a41.1,41.1,0,0,1,1.27,4.42c0,.2.37,1.63.4,1.73.07.33.34,1.6.44,2.14h0c.1-.54.37-1.81.43-2.14,0-.11.37-1.53.4-1.73A43.53,43.53,0,0,1,31.06,42q.77-2.19,1.68-4.26a2.41,2.41,0,0,1,.42-.56,2.31,2.31,0,0,1,.39-.31,2.22,2.22,0,0,1,1.15-.27c1.51.17,3,.4,4.53.68a41.51,41.51,0,0,1,4.46,1.11c.2.08,1.6.49,1.7.51l2.07.7h0C47.05,39.29,46.09,38.42,45.83,38.2Z">
+                                                    </path>
+                                                    <path fill="url(#colorless-energy-linear-gradient)"
+                                                        d="M47.05,14.48C47.05,22.47,39,29,29,29s-18.1-6.49-18.1-14.48S19,0,29,0,47.05,6.48,47.05,14.48Z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-frame card-frame--shadowed">
+                            <div class="card-frame__corner card-frame__corner--top-left"></div>
+                            <div class="card-frame__corner card-frame__corner--top-right"></div>
+                            <div class="card-frame__corner card-frame__corner--bottom-left"></div>
+                            <div class="card-frame__corner card-frame__corner--bottom-right"></div>
+                            <div class="card-frame__inner">
+                                <div class="card-frame__pokemon-image-wrapper">
+                                    <div class="card-frame__pokemon-image blend-mode--normal"
+                                        style="background-image: url('${avatarUrl}'); background-size: 50%; background-position: 50% 50%; transform: none; filter: drop-shadow(15px 0px 20px #000000) drop-shadow(-15px 0px 20px #000000);">
+                                    </div>
+                                </div>
+                                <div class="card-frame__background-image"
+                                    style="background-image: url('https://poketcgshop.s3.amazonaws.com/card-frame-bgs/lights-erikas-dratini_e65qcs.jpg'); opacity: 1;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-stats-bar card-stats-bar--shadowed"><span
+                                class="card-stats-bar-text">${tagLine} Pokemon ${game} </span></div>
+
+                        <ul class="card-moves-list card-moves-list--large">
+                            <li class="move has-energy has-damage has-description">
+                                <div class="move-cost-grid">
+                                    <div class="move-cost"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" height="30" width="30"
+                                            viewBox="0 0 57.91 57.91">
+                                            <defs>
+                                                <linearGradient id="ps-linear-gradient" x1="28.96" y1="57.91" x2="28.96"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0" stop-color="#6b4a77"></stop>
+                                                    <stop offset="1" stop-color="#f1e2ef"></stop>
+                                                </linearGradient>
+                                                <linearGradient id="ps-linear-gradient-2" x1="28.96" y1="28.96"
+                                                    x2="28.96" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.25" stop-color="#fff" stop-opacity="0"></stop>
+                                                    <stop offset="1" stop-color="#fff"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                            <g id="Layer_2" data-name="Layer 2">
+                                                <g id="Layer_1-2" data-name="Layer 1">
+                                                    <circle fill="#f05e9c" cx="28.96" cy="28.96" r="28.96"></circle>
+                                                    <g fill-opacity="0.5">
+                                                        <circle fill="url(#ps-linear-gradient)" cx="28.96" cy="28.96"
+                                                            r="28.96"></circle>
+                                                    </g>
+                                                    <path fill="url(#ps-linear-gradient-2)"
+                                                        d="M47.05,14.48C47.05,22.47,39,29,29,29s-18.1-6.49-18.1-14.48S19,0,29,0,47.05,6.48,47.05,14.48Z">
+                                                    </path>
+                                                    <path
+                                                        d="M28.93,44.12a23.54,23.54,0,0,1-17.37-8.37,25.41,25.41,0,0,1-4-6.23,1.12,1.12,0,0,1,0-.86c3.76-7.8,9.68-12.93,18.37-14.36,6.33-1.05,12,.85,17,4.69a25.29,25.29,0,0,1,7.55,9.59,1.12,1.12,0,0,1,.06.8c-3.13,6.57-8,11.31-15,13.64A23.85,23.85,0,0,1,28.93,44.12ZM35.48,19.8a10.8,10.8,0,0,1,1,16.08,10.6,10.6,0,0,1-18.07-7.12,10.65,10.65,0,0,1,4.17-9c-.12,0-.17,0-.21,0a19.27,19.27,0,0,0-9.77,8.68,1.1,1.1,0,0,0,0,1.18,18.89,18.89,0,0,0,8.13,7.92c3.8,1.91,7.73,3,12,1.75a20.08,20.08,0,0,0,12.59-9.61,1.2,1.2,0,0,0,0-1.3,19.26,19.26,0,0,0-9.69-8.59A1.15,1.15,0,0,0,35.48,19.8ZM24.24,28.94a4.83,4.83,0,0,0,3.91,4.26,5,5,0,0,0,5.32-2.38A5.07,5.07,0,0,0,32.86,25a4.83,4.83,0,0,0-5.15-1.35c1.85,1.77,2.2,3.23,1.11,4.72S26.19,30,24.24,28.94Z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg></div>
+                                </div>
+                                <div class="move-meta">
+                                    <div class="move-description"><strong class="move-name">Stream
+                                            Participation</strong><span>Has viewed heaps of streams</span></div>
+                                </div>
+                                <div class="move-damage">${streamCount}</div>
+                            </li>
+                            <li class="move has-energy has-damage has-description">
+                                <div class="move-cost-grid">
+                                    <div class="move-cost"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 57.91 57.92"
+                                            height="30" width="30">
+                                            <defs>
+                                                <linearGradient id="fire-linear-gradient" x1="28.96" y1="57.92"
+                                                    x2="28.96" y2="0.01" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0" stop-color="#89361d"></stop>
+                                                    <stop offset="1" stop-color="#f08c7a"></stop>
+                                                </linearGradient>
+                                                <linearGradient id="fire-linear-gradient-2" x1="28.96" y1="28.97"
+                                                    x2="28.96" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.25" stop-color="#fff" stop-opacity="0"></stop>
+                                                    <stop offset="1" stop-color="#fff"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                            <g id="Layer_2" data-name="Layer 2">
+                                                <g id="Layer_1-2" data-name="Layer 1">
+                                                    <circle fill="#f36b3a" cx="28.96" cy="28.97" r="28.96"></circle>
+                                                    <g fill-opacity="0.5">
+                                                        <circle fill="url(#fire-linear-gradient)" cx="28.96" cy="28.97"
+                                                            r="28.96"></circle>
+                                                    </g>
+                                                    <path fill="#010101"
+                                                        d="M53,36.59a25.31,25.31,0,0,1-7.77,13.28,24.19,24.19,0,0,1-6.55,4.18A26.83,26.83,0,0,1,30.91,56a5.14,5.14,0,0,0-.75.06H28.71a9.73,9.73,0,0,0-1.1-.06l-1.05-.12v-.58a17.08,17.08,0,0,0,2.44.29,15.6,15.6,0,0,0,2.38-.17c.77-.16,1.54-.35,2.31-.58s1.61-.48,2.38-.75a4.39,4.39,0,0,0,1.1-.58,2.8,2.8,0,0,0,.7-.87,2,2,0,0,0,.29-1.05A2.82,2.82,0,0,0,38,50.33a2.9,2.9,0,0,0-.29-.52,3.89,3.89,0,0,0-.29-.46l-.35-.41a1.07,1.07,0,0,1-.23-.52,5.41,5.41,0,0,1-.35-.64,6.48,6.48,0,0,1-.23-.63,4.81,4.81,0,0,1-.18-.7,2.09,2.09,0,0,1-.11-.7,3.3,3.3,0,0,1,.23-1.27,2.66,2.66,0,0,1,.69-1l1-.82a7.8,7.8,0,0,1,1-.69,9.07,9.07,0,0,0-1,.06h-1l-1,.23a5.92,5.92,0,0,0-1,.35,2,2,0,0,0-.87.4,2.81,2.81,0,0,0-.7.58l-.69.7a6.65,6.65,0,0,0-.64.75A6.71,6.71,0,0,0,32,43.44a10,10,0,0,0-.34-1.51,3.11,3.11,0,0,0-.76-1.22,5.41,5.41,0,0,0-1.27-.93.53.53,0,0,0-.24-.06l-.11-.11h-.18a.21.21,0,0,0-.17-.06c-.15,0-.23-.1-.23-.29a1.54,1.54,0,0,1,.11-.75c0-.31.08-.56.12-.76a1.5,1.5,0,0,0,.12-.35,4.46,4.46,0,0,1,.4-.75A5.38,5.38,0,0,1,30,36c.16-.19.33-.38.53-.58s.4-.38.63-.58c-.38,0-.77.1-1.16.18s-.77.17-1.16.29a9.55,9.55,0,0,0-1.1.4c-.34.16-.69.33-1,.52s-.62.41-.93.64a8.08,8.08,0,0,0-.93.7,2.88,2.88,0,0,0-.75.81,3.29,3.29,0,0,0-.41,1,3.17,3.17,0,0,0,0,1.15,1.56,1.56,0,0,0,.53.93,8.89,8.89,0,0,1,.81.82,7.24,7.24,0,0,1,.64.87,1.49,1.49,0,0,1,.4,1,1.89,1.89,0,0,1-.35,1.1,6.63,6.63,0,0,1-.63,1.05c-.24.27-.47.52-.7.75a4.51,4.51,0,0,0,0-1,2.13,2.13,0,0,0-.23-.76,1.66,1.66,0,0,0-.58-.52,3.35,3.35,0,0,0-.93-.52,8.29,8.29,0,0,0-.93-.29,6.07,6.07,0,0,0-1-.17h-2q.52.29,1.11.57c.34.2.69.41,1,.64a1.49,1.49,0,0,1,.7.81A2.52,2.52,0,0,1,21.75,47a2.28,2.28,0,0,1-.41,1.1,3.3,3.3,0,0,1-.87,1,2.58,2.58,0,0,0-.75,1.1,2,2,0,0,0,.12,1.16,4.38,4.38,0,0,0,1,1.68,4.9,4.9,0,0,0,1.68,1.1c.7.27,1.37.51,2,.7a8.78,8.78,0,0,0,2,.46v.58a19.34,19.34,0,0,1-2.9-.69,26.48,26.48,0,0,1-2.78-1c-.93-.38-1.82-.79-2.67-1.22a22.19,22.19,0,0,1-2.43-1.39,23.9,23.9,0,0,1-3.08-2.37,21.25,21.25,0,0,1-2.49-2.73A18.3,18.3,0,0,1,8.3,43.32a18.09,18.09,0,0,1-1.39-3.54A18.07,18.07,0,0,0,8.7,41.46c.7.51,1.47,1,2.32,1.57a15.45,15.45,0,0,0,2.21,1.16,4.14,4.14,0,0,0,1.62.41c-.66-.85-1.3-1.76-1.91-2.73s-1.24-2-1.86-3A11.5,11.5,0,0,1,9.8,35.61a9.42,9.42,0,0,1-.11-3.31A15,15,0,0,1,10,30.79a7.25,7.25,0,0,1,.35-1.39,11.13,11.13,0,0,1,.52-1.33,10.78,10.78,0,0,1,.87-1.34c.31-.42.64-.84,1-1.27s.78-.83,1.16-1.22.8-.75,1.22-1.1.85-.72,1.28-1.1a10.07,10.07,0,0,0-1,1.74,9,9,0,0,0-.75,1.68,6.48,6.48,0,0,0-.35,1.74,6.28,6.28,0,0,0,.18,1.91,3.14,3.14,0,0,0,.29,1,4.47,4.47,0,0,0,.52,1,11.54,11.54,0,0,0,.64,1,9.26,9.26,0,0,0,.58.75,5,5,0,0,0,.69.7q.34.34.75.69c.28.24.55.45.82.64a6.33,6.33,0,0,0,.87.47,7,7,0,0,1-.35-.81,6.69,6.69,0,0,1-.29-.82,5.55,5.55,0,0,1-.29-.87,6.56,6.56,0,0,1-.29-.81A5.52,5.52,0,0,1,18,30.45a8.54,8.54,0,0,1,.46-3.31,6.45,6.45,0,0,1,.76-1.39c.38-.47.77-.91,1.16-1.33a16.08,16.08,0,0,1,1.27-1.16l1.28-1.16,1.39-1.16c.35-.31.76-.64,1.22-1s1-.71,1.51-1.1a6,6,0,0,0,1.27-1.33,3.28,3.28,0,0,0,.64-1.45,6.33,6.33,0,0,0,0-1.74,4.31,4.31,0,0,0-.64-1.51,17.44,17.44,0,0,0-.92-1.51c-.32-.46-.64-.93-1-1.39a18.26,18.26,0,0,1,3.25,1.39,15.66,15.66,0,0,1,2.61,2,16.49,16.49,0,0,1,2,2.55,16.87,16.87,0,0,1,1.5,2.9c.39,1.12.74,2.24,1.05,3.37s.48,2.26.64,3.42A17.43,17.43,0,0,1,37.52,29,24.86,24.86,0,0,1,37,32.59c.58,0,1.18-.09,1.8-.17s1.23-.18,1.85-.29a14,14,0,0,0,1.69-.58A10.65,10.65,0,0,0,44,30.74a4.05,4.05,0,0,0,.81-.53l.81-.46c.2-.19.41-.39.64-.58s.44-.46.64-.7a3.45,3.45,0,0,0,.46-.69,2.86,2.86,0,0,0,.35-.7,3.08,3.08,0,0,0,.23-.81,4.12,4.12,0,0,0,.18-.75c.23.42.44.85.63,1.27a10.65,10.65,0,0,1,.58,1.34,6,6,0,0,1,.41,1.39A8.51,8.51,0,0,1,49.82,31a9.13,9.13,0,0,1-.18,1.16,5.54,5.54,0,0,1-.35,1c-.11.31-.25.64-.4,1l-.47,1A8.68,8.68,0,0,1,47,37.29,10.24,10.24,0,0,1,45,39a25.21,25.21,0,0,1-2.2,1.45,19.82,19.82,0,0,1-2.26,1.22c.31.11.62.21.93.29a6.73,6.73,0,0,0,1.1,0,5.51,5.51,0,0,0,1.1-.12c.39-.08.79-.17,1.22-.29a18.82,18.82,0,0,0,2.32-.87,22.56,22.56,0,0,0,2.32-1.22,18.77,18.77,0,0,0,2-1.39A9.58,9.58,0,0,0,53,36.59Z">
+                                                    </path>
+                                                    <path fill="url(#fire-linear-gradient-2)"
+                                                        d="M47.06,14.48C47.06,22.48,39,29,29,29S10.85,22.48,10.85,14.48,19,0,29,0,47.06,6.48,47.06,14.48Z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg></div>
+                                </div>
+                                <div class="move-meta">
+                                    <div class="move-description"><strong class="move-name">Chat
+                                            Participation</strong><span>Lines of fire in the chat</span></div>
+                                </div>
+                                <div class="move-damage">${chatCount}</div>
+                            </li>
+                            <li class="move has-energy has-damage has-description">
+                                <div class="move-cost-grid">
+                                    <div class="move-cost"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 57.91 57.91"
+                                            height="30" width="30">
+                                            <defs>
+                                                <linearGradient id="fi-linear-gradient" x1="28.96" y1="57.91" x2="28.96"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0" stop-color="#5a130a"></stop>
+                                                    <stop offset="1" stop-color="#faa967"></stop>
+                                                </linearGradient>
+                                                <linearGradient id="fi-gradient-swatch" x1="28.96" y1="28.96" x2="28.96"
+                                                    y2="0.01" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.25" stop-color="#fff" stop-opacity="0"></stop>
+                                                    <stop offset="1" stop-color="#fff"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                            <g id="Layer_2" data-name="Layer 2">
+                                                <g id="Layer_1-2" data-name="Layer 1">
+                                                    <circle fill="#bf442c" cx="28.96" cy="28.96" r="28.96"></circle>
+                                                    <g fill-opacity="0.5">
+                                                        <circle fill="url(#fi-linear-gradient)" cx="28.96" cy="28.96"
+                                                            r="28.96"></circle>
+                                                    </g>
+                                                    <path fill="#010101"
+                                                        d="M9.66,25.81V15.19a2.07,2.07,0,0,1,.62-1.51A2,2,0,0,1,11.79,13h3.7a2,2,0,0,1,1.51.68,2,2,0,0,1,.63,1.51V25.81A2.15,2.15,0,0,1,15.49,28h-3.7a2.13,2.13,0,0,1-2.13-2.14Zm13.9,11.82L21.85,39.2v4.22c-.39.34-1,.86-1.72,1.56H11.38L9.66,43.42V31.8c.38-.31.95-.81,1.72-1.51H26.22c.38.35,1,.85,1.72,1.51v4.27l-1.72,1.56ZM20,25.81V13.05a2.13,2.13,0,0,1,2.14-2.13h3.54a2.08,2.08,0,0,1,1.51.62,2,2,0,0,1,.62,1.51V25.81a2,2,0,0,1-.62,1.51,2.05,2.05,0,0,1-1.51.63H22.11A2.15,2.15,0,0,1,20,25.81Zm26.56,4.48,1.72,1.51V43.42L46.53,45H39.81L38.1,46.54V48c-.39.34-1,.87-1.72,1.56H22.78V46.7h1.57c.34-.35.86-.85,1.56-1.51V42.84l1.72-1.56h2.65L32,39.77v-8c.38-.31,1-.81,1.72-1.51Zm-16.4-4.48V13.05a2.12,2.12,0,0,1,2.13-2.13h3.49a2.13,2.13,0,0,1,2.14,2.13V25.81A2.15,2.15,0,0,1,35.75,28H32.26a2.13,2.13,0,0,1-2.13-2.14ZM48.25,15.19V25.81a2.07,2.07,0,0,1-.62,1.51,2.22,2.22,0,0,1-1.57.63H42.37a2.15,2.15,0,0,1-2.14-2.14V15.19a2,2,0,0,1,.63-1.51A2,2,0,0,1,42.37,13h3.69a2.15,2.15,0,0,1,1.57.68A2.07,2.07,0,0,1,48.25,15.19Z">
+                                                    </path>
+                                                    <path fill="url(#fi-gradient-swatch)"
+                                                        d="M47.05,14.48C47.05,22.48,39,29,29,29s-18.1-6.48-18.1-14.48S19,0,29,0,47.05,6.49,47.05,14.48Z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg></div>
+                                </div>
+                                <div class="move-meta">
+                                    <div class="move-description"><strong class="move-name">Tracks
+                                            Rated</strong><span>Crowdsourced Library Metadata</span></div>
+                                </div>
+                                <div class="move-damage">${tracksRated}</div>
+                            </li>
+                        </ul>
+                        <div class="energy-cost-grid d-flex">
+                            <div class="energy-cost-grid__energy-costs d-grid">
+                                <div class="cost weakness"><span class="cost-label">weakness</span><svg
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0 0 57.91 57.91" height="30" width="30">
+                                        <defs>
+                                            <linearGradient id="fi-linear-gradient" x1="28.96" y1="57.91" x2="28.96"
+                                                gradientUnits="userSpaceOnUse">
+                                                <stop offset="0" stop-color="#5a130a"></stop>
+                                                <stop offset="1" stop-color="#faa967"></stop>
+                                            </linearGradient>
+                                            <linearGradient id="fi-gradient-swatch" x1="28.96" y1="28.96" x2="28.96"
+                                                y2="0.01" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0.25" stop-color="#fff" stop-opacity="0"></stop>
+                                                <stop offset="1" stop-color="#fff"></stop>
+                                            </linearGradient>
+                                        </defs>
+                                        <g id="Layer_2" data-name="Layer 2">
+                                            <g id="Layer_1-2" data-name="Layer 1">
+                                                <circle fill="#bf442c" cx="28.96" cy="28.96" r="28.96"></circle>
+                                                <g fill-opacity="0.5">
+                                                    <circle fill="url(#fi-linear-gradient)" cx="28.96" cy="28.96"
+                                                        r="28.96"></circle>
+                                                </g>
+                                                <path fill="#010101"
+                                                    d="M9.66,25.81V15.19a2.07,2.07,0,0,1,.62-1.51A2,2,0,0,1,11.79,13h3.7a2,2,0,0,1,1.51.68,2,2,0,0,1,.63,1.51V25.81A2.15,2.15,0,0,1,15.49,28h-3.7a2.13,2.13,0,0,1-2.13-2.14Zm13.9,11.82L21.85,39.2v4.22c-.39.34-1,.86-1.72,1.56H11.38L9.66,43.42V31.8c.38-.31.95-.81,1.72-1.51H26.22c.38.35,1,.85,1.72,1.51v4.27l-1.72,1.56ZM20,25.81V13.05a2.13,2.13,0,0,1,2.14-2.13h3.54a2.08,2.08,0,0,1,1.51.62,2,2,0,0,1,.62,1.51V25.81a2,2,0,0,1-.62,1.51,2.05,2.05,0,0,1-1.51.63H22.11A2.15,2.15,0,0,1,20,25.81Zm26.56,4.48,1.72,1.51V43.42L46.53,45H39.81L38.1,46.54V48c-.39.34-1,.87-1.72,1.56H22.78V46.7h1.57c.34-.35.86-.85,1.56-1.51V42.84l1.72-1.56h2.65L32,39.77v-8c.38-.31,1-.81,1.72-1.51Zm-16.4-4.48V13.05a2.12,2.12,0,0,1,2.13-2.13h3.49a2.13,2.13,0,0,1,2.14,2.13V25.81A2.15,2.15,0,0,1,35.75,28H32.26a2.13,2.13,0,0,1-2.13-2.14ZM48.25,15.19V25.81a2.07,2.07,0,0,1-.62,1.51,2.22,2.22,0,0,1-1.57.63H42.37a2.15,2.15,0,0,1-2.14-2.14V15.19a2,2,0,0,1,.63-1.51A2,2,0,0,1,42.37,13h3.69a2.15,2.15,0,0,1,1.57.68A2.07,2.07,0,0,1,48.25,15.19Z">
+                                                </path>
+                                                <path fill="url(#fi-gradient-swatch)"
+                                                    d="M47.05,14.48C47.05,22.48,39,29,29,29s-18.1-6.48-18.1-14.48S19,0,29,0,47.05,6.49,47.05,14.48Z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg></div>
+                                <div class="cost resistance"><span class="cost-label">resistance</span>
+                                    <div class="resistance-cost-wrapper"><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" height="30" width="30"
+                                            viewBox="0 0 57.91 57.91">
+                                            <defs>
+                                                <linearGradient id="ps-linear-gradient" x1="28.96" y1="57.91" x2="28.96"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0" stop-color="#6b4a77"></stop>
+                                                    <stop offset="1" stop-color="#f1e2ef"></stop>
+                                                </linearGradient>
+                                                <linearGradient id="ps-linear-gradient-2" x1="28.96" y1="28.96"
+                                                    x2="28.96" gradientUnits="userSpaceOnUse">
+                                                    <stop offset="0.25" stop-color="#fff" stop-opacity="0"></stop>
+                                                    <stop offset="1" stop-color="#fff"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                            <g id="Layer_2" data-name="Layer 2">
+                                                <g id="Layer_1-2" data-name="Layer 1">
+                                                    <circle fill="#f05e9c" cx="28.96" cy="28.96" r="28.96"></circle>
+                                                    <g fill-opacity="0.5">
+                                                        <circle fill="url(#ps-linear-gradient)" cx="28.96" cy="28.96"
+                                                            r="28.96"></circle>
+                                                    </g>
+                                                    <path fill="url(#ps-linear-gradient-2)"
+                                                        d="M47.05,14.48C47.05,22.47,39,29,29,29s-18.1-6.49-18.1-14.48S19,0,29,0,47.05,6.48,47.05,14.48Z">
+                                                    </path>
+                                                    <path
+                                                        d="M28.93,44.12a23.54,23.54,0,0,1-17.37-8.37,25.41,25.41,0,0,1-4-6.23,1.12,1.12,0,0,1,0-.86c3.76-7.8,9.68-12.93,18.37-14.36,6.33-1.05,12,.85,17,4.69a25.29,25.29,0,0,1,7.55,9.59,1.12,1.12,0,0,1,.06.8c-3.13,6.57-8,11.31-15,13.64A23.85,23.85,0,0,1,28.93,44.12ZM35.48,19.8a10.8,10.8,0,0,1,1,16.08,10.6,10.6,0,0,1-18.07-7.12,10.65,10.65,0,0,1,4.17-9c-.12,0-.17,0-.21,0a19.27,19.27,0,0,0-9.77,8.68,1.1,1.1,0,0,0,0,1.18,18.89,18.89,0,0,0,8.13,7.92c3.8,1.91,7.73,3,12,1.75a20.08,20.08,0,0,0,12.59-9.61,1.2,1.2,0,0,0,0-1.3,19.26,19.26,0,0,0-9.69-8.59A1.15,1.15,0,0,0,35.48,19.8ZM24.24,28.94a4.83,4.83,0,0,0,3.91,4.26,5,5,0,0,0,5.32-2.38A5.07,5.07,0,0,0,32.86,25a4.83,4.83,0,0,0-5.15-1.35c1.85,1.77,2.2,3.23,1.11,4.72S26.19,30,24.24,28.94Z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg><span class="modifier">-30</span></div>
+                                </div>
+                                <div class="cost retreat-cost"><span class="cost-label">retreat cost</span><svg
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0 0 57.91 57.91" height="30" width="30">
+                                        <defs>
+                                            <radialGradient id="co-radial-gradient" cx="28.96" cy="28.96"
+                                                fx="18.2733555706497" fy="9.771120254151356" r="39.34"
+                                                gradientUnits="userSpaceOnUse">
+                                                <stop offset="0" stop-color="#fdfeff"></stop>
+                                                <stop offset="0.49" stop-color="#f1f2f2"></stop>
+                                                <stop offset="0.77" stop-color="#b1a6a0"></stop>
+                                                <stop offset="1" stop-color="#816d62"></stop>
+                                            </radialGradient>
+                                            <linearGradient id="colorless-energy-linear-gradient" x1="28.96" y1="28.96"
+                                                x2="28.96" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0.25" stop-color="#fff" stop-opacity="0"></stop>
+                                                <stop offset="1" stop-color="#fff"></stop>
+                                            </linearGradient>
+                                        </defs>
+                                        <g id="colorless_layer_2" data-name="Layer 2">
+                                            <g id="colorless_layer_1" data-name="Layer 1">
+                                                <circle fill="#b3b293" cx="28.96" cy="28.96" r="28.96"></circle>
+                                                <g fill-opacity="0.5">
+                                                    <circle fill="url(#co-radial-gradient)" cx="28.96" cy="28.96"
+                                                        r="28.96"></circle>
+                                                </g>
+                                                <path fill="#010101"
+                                                    d="M45.83,38.2c-.08-.08-1.14-1.09-1.3-1.22a41.61,41.61,0,0,1-3.19-3.31c-1-1.16-2-2.36-2.85-3.58a2,2,0,0,1,0-2.27c.89-1.22,1.85-2.41,2.85-3.58a41.61,41.61,0,0,1,3.19-3.31c.16-.13,1.22-1.14,1.3-1.22.26-.22,1.22-1.09,1.64-1.44h0l-2.07.7c-.1,0-1.5.44-1.7.51a41.51,41.51,0,0,1-4.46,1.11c-1.51.29-3,.51-4.53.68A2.22,2.22,0,0,1,33.55,21a2.2,2.2,0,0,1-.81-.87q-.91-2.07-1.68-4.26a43.53,43.53,0,0,1-1.27-4.42c0-.2-.37-1.62-.4-1.72-.07-.34-.33-1.61-.43-2.15h0c-.1.54-.36,1.81-.43,2.15,0,.1-.37,1.52-.4,1.72a40.45,40.45,0,0,1-1.27,4.42q-.77,2.19-1.68,4.26a2.2,2.2,0,0,1-.81.87,1.59,1.59,0,0,1-.27.12,2.12,2.12,0,0,1-.88.15c-1.51-.17-3-.39-4.53-.68a41.51,41.51,0,0,1-4.46-1.11c-.2-.07-1.6-.49-1.7-.51l-2.07-.7h0c.41.35,1.37,1.22,1.64,1.44.07.08,1.13,1.09,1.29,1.22a41.61,41.61,0,0,1,3.19,3.31c1,1.16,2,2.36,2.85,3.58a2,2,0,0,1,0,2.27q-1.34,1.83-2.85,3.58A41.61,41.61,0,0,1,13.38,37c-.16.13-1.22,1.14-1.29,1.22-.27.22-1.23,1.09-1.64,1.44h0l2.07-.7c.1,0,1.5-.43,1.7-.51a41.51,41.51,0,0,1,4.46-1.11c1.51-.28,3-.51,4.53-.68a2.22,2.22,0,0,1,1.15.27,2.2,2.2,0,0,1,.81.87c.61,1.38,1.17,2.81,1.68,4.26a41.1,41.1,0,0,1,1.27,4.42c0,.2.37,1.63.4,1.73.07.33.34,1.6.44,2.14h0c.1-.54.37-1.81.43-2.14,0-.11.37-1.53.4-1.73A43.53,43.53,0,0,1,31.06,42q.77-2.19,1.68-4.26a2.41,2.41,0,0,1,.42-.56,2.31,2.31,0,0,1,.39-.31,2.22,2.22,0,0,1,1.15-.27c1.51.17,3,.4,4.53.68a41.51,41.51,0,0,1,4.46,1.11c.2.08,1.6.49,1.7.51l2.07.7h0C47.05,39.29,46.09,38.42,45.83,38.2Z">
+                                                </path>
+                                                <path fill="url(#colorless-energy-linear-gradient)"
+                                                    d="M47.05,14.48C47.05,22.47,39,29,29,29s-18.1-6.49-18.1-14.48S19,0,29,0,47.05,6.48,47.05,14.48Z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 57.91 57.91" height="30"
+                                        width="30">
+                                        <defs>
+                                            <radialGradient id="co-radial-gradient" cx="28.96" cy="28.96"
+                                                fx="18.2733555706497" fy="9.771120254151356" r="39.34"
+                                                gradientUnits="userSpaceOnUse">
+                                                <stop offset="0" stop-color="#fdfeff"></stop>
+                                                <stop offset="0.49" stop-color="#f1f2f2"></stop>
+                                                <stop offset="0.77" stop-color="#b1a6a0"></stop>
+                                                <stop offset="1" stop-color="#816d62"></stop>
+                                            </radialGradient>
+                                            <linearGradient id="colorless-energy-linear-gradient" x1="28.96" y1="28.96"
+                                                x2="28.96" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0.25" stop-color="#fff" stop-opacity="0"></stop>
+                                                <stop offset="1" stop-color="#fff"></stop>
+                                            </linearGradient>
+                                        </defs>
+                                        <g id="colorless_layer_2" data-name="Layer 2">
+                                            <g id="colorless_layer_1" data-name="Layer 1">
+                                                <circle fill="#b3b293" cx="28.96" cy="28.96" r="28.96"></circle>
+                                                <g fill-opacity="0.5">
+                                                    <circle fill="url(#co-radial-gradient)" cx="28.96" cy="28.96"
+                                                        r="28.96"></circle>
+                                                </g>
+                                                <path fill="#010101"
+                                                    d="M45.83,38.2c-.08-.08-1.14-1.09-1.3-1.22a41.61,41.61,0,0,1-3.19-3.31c-1-1.16-2-2.36-2.85-3.58a2,2,0,0,1,0-2.27c.89-1.22,1.85-2.41,2.85-3.58a41.61,41.61,0,0,1,3.19-3.31c.16-.13,1.22-1.14,1.3-1.22.26-.22,1.22-1.09,1.64-1.44h0l-2.07.7c-.1,0-1.5.44-1.7.51a41.51,41.51,0,0,1-4.46,1.11c-1.51.29-3,.51-4.53.68A2.22,2.22,0,0,1,33.55,21a2.2,2.2,0,0,1-.81-.87q-.91-2.07-1.68-4.26a43.53,43.53,0,0,1-1.27-4.42c0-.2-.37-1.62-.4-1.72-.07-.34-.33-1.61-.43-2.15h0c-.1.54-.36,1.81-.43,2.15,0,.1-.37,1.52-.4,1.72a40.45,40.45,0,0,1-1.27,4.42q-.77,2.19-1.68,4.26a2.2,2.2,0,0,1-.81.87,1.59,1.59,0,0,1-.27.12,2.12,2.12,0,0,1-.88.15c-1.51-.17-3-.39-4.53-.68a41.51,41.51,0,0,1-4.46-1.11c-.2-.07-1.6-.49-1.7-.51l-2.07-.7h0c.41.35,1.37,1.22,1.64,1.44.07.08,1.13,1.09,1.29,1.22a41.61,41.61,0,0,1,3.19,3.31c1,1.16,2,2.36,2.85,3.58a2,2,0,0,1,0,2.27q-1.34,1.83-2.85,3.58A41.61,41.61,0,0,1,13.38,37c-.16.13-1.22,1.14-1.29,1.22-.27.22-1.23,1.09-1.64,1.44h0l2.07-.7c.1,0,1.5-.43,1.7-.51a41.51,41.51,0,0,1,4.46-1.11c1.51-.28,3-.51,4.53-.68a2.22,2.22,0,0,1,1.15.27,2.2,2.2,0,0,1,.81.87c.61,1.38,1.17,2.81,1.68,4.26a41.1,41.1,0,0,1,1.27,4.42c0,.2.37,1.63.4,1.73.07.33.34,1.6.44,2.14h0c.1-.54.37-1.81.43-2.14,0-.11.37-1.53.4-1.73A43.53,43.53,0,0,1,31.06,42q.77-2.19,1.68-4.26a2.41,2.41,0,0,1,.42-.56,2.31,2.31,0,0,1,.39-.31,2.22,2.22,0,0,1,1.15-.27c1.51.17,3,.4,4.53.68a41.51,41.51,0,0,1,4.46,1.11c.2.08,1.6.49,1.7.51l2.07.7h0C47.05,39.29,46.09,38.42,45.83,38.2Z">
+                                                </path>
+                                                <path fill="url(#colorless-energy-linear-gradient)"
+                                                    d="M47.05,14.48C47.05,22.47,39,29,29,29s-18.1-6.49-18.1-14.48S19,0,29,0,47.05,6.48,47.05,14.48Z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg></div>
+                            </div>
+                        </div>
+                        <div class="card-description">
+                            <div class="card-description__borderside"></div><span class="card-description__text"><span
+                                    class="card-description__text__content">Followed: ${followDate}<br />Stream stats
+                                    recorded since Easter
+                                    2024.</span><span class="card-description__text__number">#3</span></span>
+                        </div>
+                    </div>
+                    <div class="card__footer card__footer--with-copyright">
+                        <p class="illustrator">Illus. G-Force</p>
+                        <p class="copyright">©2024 G-Force</p>
+                        <div class="set-number">${userId}<div class="rarity-symbol"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.84 31.19" width="16" height="16">
+                                    <g id="Layer_2" data-name="Layer 2">
+                                        <g id="Layer_1-2" data-name="Layer 1">
+                                            <path fill="#000000" d="M2.78,13.77,7.25,0l4.47,13.77L0,5.25H14.49">
+                                            </path>
+                                            <path fill="#000000" d="M24.12,13.77,28.59,0l4.47,13.77L21.34,5.25h14.5">
+                                            </path>
+                                            <path fill="#000000"
+                                                d="M13.7,31.19l4.47-13.77,4.47,13.77L10.92,22.67H25.41"></path>
+                                        </g>
+                                    </g>
+                                </svg></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
