@@ -50,9 +50,11 @@ function connectws() {
         if(wsdata.event && wsdata.event.type === 'Custom'){
             //Convert Serialised JSON to Object
             //console.log(wsdata.data.data);
-            const data = JSON.parse(wsdata.data.data);
+            let data = JSON.parse(wsdata.data.data);
             //console.log(data);
             //generateCard(data, fetchTemplate());
+            data = processCardData(data);
+            generateCard(data, fetchTemplate());
         }
       };
     }
@@ -257,6 +259,36 @@ const data = [{
 // Fury Swipes
 // Selfdestruct
 
+function processCardData(data) {
+    if(!data[0].userType) {
+        data[0].userType = 'Viewer';
+        data[0].indentType = '--basic';
+        data[0].showAffiliate = 'hide';
+        data[0].showPartner = 'hide';
+    }
+
+    if(data[0].userType === 'affiliate') {
+        data[0].userType = '';
+        data[0].indentType = '--indented';
+        data[0].showPartner = 'hide';
+        data[0].showViewer = 'hide';
+    }
+
+    if(data[0].userType === 'partner') {
+        data[0].userType = '';
+        data[0].indentType = '--indented';
+        data[0].showAffiliate = 'hide';
+        data[0].showViewer = 'hide';
+    }
+
+    data[0].followDate = formatDate(new Date(data[0].followDate));
+       
+
+    console.log(data);
+
+    return data;
+
+}
 
 
 function init() {
@@ -264,37 +296,9 @@ function init() {
     connectws();
 
 
-    let cardData = `[{"userName":"GForce_Aus","userType":"","game":" - Music","userId":"1234123123","followDate":"2021-09-01","isSub":false,"isMod":false,"isVip":false,"avatarUrl":"https://static-cdn.jtvnw.net/jtv_user_pictures/07628ed7-5541-48bc-a05b-e27d116d49dd-profile_image-300x300.png","chatCount":100,"streamCount":10,"tracksRated":5,"cardType":"water","cardBackground":"black","tagLine":""}]`;
-    const tempdata = JSON.parse(cardData);
-
-
-    if(!tempdata[0].userType) {
-        tempdata[0].userType = 'Viewer';
-        tempdata[0].indentType = '--basic';
-        tempdata[0].showAffiliate = 'hide';
-        tempdata[0].showPartner = 'hide';
-    }
-
-    if(tempdata[0].userType === 'affiliate') {
-        tempdata[0].userType = '';
-        tempdata[0].indentType = '--indented';
-        tempdata[0].showPartner = 'hide';
-        tempdata[0].showViewer = 'hide';
-    }
-
-    if(tempdata[0].userType === 'partner') {
-        tempdata[0].userType = '';
-        tempdata[0].indentType = '--indented';
-        tempdata[0].showAffiliate = 'hide';
-        tempdata[0].showViewer = 'hide';
-    }
-
-    tempdata[0].followDate = formatDate(new Date(tempdata[0].followDate));
-       
-
-    console.log(tempdata);
-
-    generateCard(tempdata, fetchTemplate());
+    // let cardData = `[{"userName":"GForce_Aus","userType":"","game":" - Music","userId":"1234123123","followDate":"2021-09-01","isSub":false,"isMod":false,"isVip":false,"avatarUrl":"https://static-cdn.jtvnw.net/jtv_user_pictures/07628ed7-5541-48bc-a05b-e27d116d49dd-profile_image-300x300.png","chatCount":100,"streamCount":10,"tracksRated":5,"cardType":"water","cardBackground":"black","tagLine":""}]`;
+    // const tempdata = JSON.parse(cardData);
+    // generateCard(tempdata, fetchTemplate());
 
 }
 
