@@ -12,7 +12,7 @@ const fetchTemplate = async () => {
 };
 
 
-var ws = new WebSocket("ws://localhost:8080");
+var ws = new WebSocket("ws://localhost:8080/");
 
 function connectws() {
     if ("WebSocket" in window) {
@@ -281,7 +281,10 @@ function processCardData(data) {
         data[0].showViewer = 'hide';
     }
 
-    data[0].followDate = formatDate(new Date(data[0].followDate));
+    data[0].cardType ? {} : data[0].cardType = 'colorless';
+
+
+    data[0].followDate ? data[0].followDate = formatDate(new Date(data[0].followDate)) : data[0].followDate = "Unknown";
        
 
     console.log(data);
