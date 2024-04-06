@@ -108,7 +108,7 @@ const generateCard = async (data) => {
             if(!item[key]) {
                 switch (token) {
                     case 'tagLine':
-                        return 'Basic Bitch';
+                        return 'The Lurker';
                     default:
                         return '';
                 } 
