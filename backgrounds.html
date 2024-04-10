@@ -532,7 +532,7 @@
 
       copyButtons.forEach(function (button) {
         button.addEventListener("click", function () {
-          var valueToCopy = "!setBackground " + button.getAttribute("data-value");
+          var valueToCopy = "!cardBackground " + button.getAttribute("data-value");
           copyToClipboard(valueToCopy);
           alert("Code Copied to keyboard. Paste in Twitch Chat: \r\n" + valueToCopy);
         });
