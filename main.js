@@ -142,9 +142,11 @@ const generateCard = async (data) => {
 
 function card_animation(card){
 
+
     let cardheight = card.offsetHeight;
     let verticalCentered = (innerHeight - cardheight) / 2;
-    gsap.to(card, {duration: 2, scale: 0.75, y: verticalCentered});
+    gsap.to(card, {duration: 2, scale: 0.75, transformOrigin: 'center', y: verticalCentered});
+
 }
 
 
